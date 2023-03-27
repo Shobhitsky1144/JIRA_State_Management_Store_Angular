@@ -1,0 +1,43 @@
+<div style="display: flex;justify-content: space-between;align-items: center;">
+    <div>
+    <h1>Add Task</h1>
+    <form [formGroup]="taskForms" (ngSubmit)="submit()">
+        <input type="text" name="name" formControlName="name" placeholder="Task Name"><br/><br/>
+        <textarea type="text" name="desc" formControlName="desc" placeholder="Task Description" rows="6" cols="6" style="width:100%"></textarea><br/><br/>
+  <div style="display: flex;justify-content: space-between;">
+        <div *ngFor="let color of colors" class="color-group">
+        <div (click)="selectColor(color)" [style.background]="color"></div><br/><br/>
+    </div>
+</div>
+        <br/><br/>
+        <button type="submit">Add Task</button>
+    </form>
+</div>
+    <div class="section">
+<h1>To Start</h1>
+<ul *ngFor="let item of startList">
+    <li  [style.background]="item.color" class="contentDiv">{{item.name}}<br/>{{item.desc}}<br>
+<button (click)="progressData(item)">Progress</button>
+</li></ul>
+    </div>
+    <div  class="section">
+        <h1>In Progress</h1>
+<ul *ngFor="let item of progressList">
+    <li [style.background]="item.color" class="contentDiv" >{{item.name}}<br/>{{item.desc}}<br>
+    <button (click)="completedData(item)">Completed</button><br/>
+       <br/> <button (click)="blockedData(item)">Block</button>
+    </li>
+</ul>
+            </div>
+            <div  class="section">
+                <h1>Completed</h1>
+                <ul *ngFor="let item of completeList"><li  [style.background]="item.color" class="contentDiv">{{item.name}}<br/>{{item.desc}}<br>
+             </li>
+            <button (click)="finishData(item)">Finish</button></ul>
+                    </div>
+                    <div  class="section">
+                        <h1>Blocked</h1>
+                        <ul *ngFor="let item of blockedList"><li  [style.background]="item.color" class="contentDiv">{{item.name}}<br/>{{item.desc}}<br>
+                      </li></ul>
+                            </div>
+</div>  

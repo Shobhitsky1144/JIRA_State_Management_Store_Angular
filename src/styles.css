@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: aqua;
+  height: 3.5rem;
+}
+th,
+td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  color: brown;
+}
+
+form {
+  margin: auto;
+  width: 335px;
+  text-align: center;
+  padding: 2rem;
+}
+h1 {
+  padding: 2rem;
+  text-align: center;
+  color: brown;
+}
+thead {
+  background-color: aqua;
+}
+input {
+  height: 29px;
+  border-radius: 20px;
+  width: 100%;
+  border: 2px solid aqua;
+  padding-left: 10px;
+  /* padding: 0.3rem 0.7rem; */
+  outline: none;
+}
+textarea {
+  border: 2px solid aqua;
+  padding: 0.3rem 0.7rem;
+}
+button {
+  height: 29px;
+
+  border-radius: 20px;
+  width: 100%;
+  background: aqua;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-family: auto;
+  font-size: 16px;
+}
+.error-msg {
+  color: red;
+}
+ul li {
+  list-style: none;
+  display: inline-flex;
+  margin: 0.4rem;
+}
+ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: brown;
+  background: white;
+  padding: 0.5rem 2rem;
+
+  border-radius: 10px;
+}
+table {
+  width: 100%;
+  padding: 2rem;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+td {
+  text-align: center;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  table {
+    margin: 10px;
+  }
+}
+
+.section {
+  background: wheat;
+  height: 100vh;
+  border: 1px solid black;
+}
+.contentDiv {
+  background: red;
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+}
